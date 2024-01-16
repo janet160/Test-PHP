@@ -17,6 +17,8 @@ if (!isset($_SESSION['loggedin'])) {
   <title>Menu</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/estilos.css" rel="stylesheet">
+  <script src="scripts/js/funciones.js"></script>
+  <script src="scripts/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
@@ -61,6 +63,7 @@ if (!isset($_SESSION['loggedin'])) {
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="#">Reportes</a></li>
             <li><a class="dropdown-item" href="logout.php">Salir</a></li>
+            
           </ul>
         </li>
       </ul>
@@ -69,8 +72,8 @@ if (!isset($_SESSION['loggedin'])) {
 </nav>
 </header>
 
-
-<script src="scripts/js/bootstrap.bundle.min.js">></script>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo esse corrupti cum earum ipsum architecto quisquam laborum ut distinctio provident sunt, quas, consequuntur repellat ipsam eos autem veniam aspernatur excepturi.</p>
+<script src="scripts/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

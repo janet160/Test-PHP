@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido al Sistema de Estacionamiento</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/estilos.css" rel="stylesheet">
 </head>
 <body>
     <section class="h-100 gradient-form" style="background-color: #eee;">
@@ -46,7 +46,7 @@
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                                     <h4 class="mb-4">Bienvenido al sistema de control de estacionamiento</h4>
-                                    <p class="small mb-0">Nos complace darte la bienvenida a nuestra plataforma, diseñada para hacer más eficiente y conveniente tu experiencia de estacionamiento. Con nuestra avanzada tecnología, podrás gestionar tus espacios de estacionamiento de manera sencilla y efectiva. Nos complace darte la bienvenida a nuestra plataforma, diseñada para hacer más eficiente y conveniente tu experiencia de estacionamiento. Con nuestra avanzada tecnología, podrás gestionar tus espacios de estacionamiento de manera sencilla y efectiva.</p>
+                                    <p class="small mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima eum voluptate consequatur dolorum, libero eligendi maxime necessitatibus accusantium fugit possimus reprehenderit consectetur sequi nostrum, aspernatur aut harum enim, dolor omnis?</p>
                                 </div>
                             </div>
                         </div>
@@ -56,5 +56,7 @@
         </div>
     </section>
     <script src="scripts/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/js/funciones.js"></script>
+    
 </body>
 </html>

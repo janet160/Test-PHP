@@ -12,6 +12,6 @@
     if (mysqli_connect_error()) {
         exit('Error de conexión con MySQL: ' . mysqli_connect_error());
     } else {
-        echo "Conexión exitosa";
+
     }
 ?>
