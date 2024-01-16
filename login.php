@@ -24,10 +24,10 @@
                 $_SESSION['id'] = $usuario;
                 header('Location: menu.php');
             } else {
-                echo '<script language="javascript">alert ("Contraseña incorrecta"); location.href="index.php";</script>';
+                echo '<script language="javascript">alert ("Contraseña incorrecta"); window.location.href="index.php";</script>';
             }
         } else {
-            echo '<script language="javascript">alert ("Usuario incorrecto"); location.href="index.php";</script>';
+            echo '<script language="javascript">alert ("Usuario incorrecto"); window.location.href="index.php";</script>';
         }
         $stmt->close();
     }
