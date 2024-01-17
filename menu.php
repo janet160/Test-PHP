@@ -26,7 +26,7 @@ if (!isset($_SESSION['loggedin'])) {
   <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="/imagenes/icons/" alt="">
+    <a class="navbar-brand" href="" onclick="loadDiv('#contenido','inicio.php');">
       Inicio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -38,20 +38,20 @@ if (!isset($_SESSION['loggedin'])) {
     </li>
         <li class="nav-item">
           
-          <a class="nav-link active" aria-current="page" href="#">Registros</a>
+          <a class="nav-link active" onclick="loadDiv('#contenido','registros.php');" aria-current="page" href="#">Registros</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#">Cajones</a>
+          <a class="nav-link" href="#" onclick="loadDiv('#contenido','cajones.php');">Cajones</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Clientes</a>
+          <a class="nav-link" href="#" onclick="loadDiv('#contenido','clientes.php');">Clientes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Vehiculos</a>
+          <a class="nav-link" href="#" onclick="loadDiv('#contenido','vehiculos.php');">Vehiculos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tarifas</a>
+          <a class="nav-link" href="#" onclick="loadDiv('#contenido','tarifas.php');">Tarifas</a>
         </li>
         <li class="nav-item">
       <span class="nav-link"  >|</span>
@@ -61,7 +61,7 @@ if (!isset($_SESSION['loggedin'])) {
             Otros
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Reportes</a></li>
+            <li><a class="dropdown-item" href="#" onclick="loadDiv('#contenido','reportes.php');">Reportes</a></li>
             <li><a class="dropdown-item" href="logout.php">Salir</a></li>
             
           </ul>
@@ -71,8 +71,9 @@ if (!isset($_SESSION['loggedin'])) {
   </div>
 </nav>
 </header>
+<div id="contenido">
 
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo esse corrupti cum earum ipsum architecto quisquam laborum ut distinctio provident sunt, quas, consequuntur repellat ipsam eos autem veniam aspernatur excepturi.</p>
+</div>
 <script src="scripts/js/bootstrap.bundle.min.js"></script>
 </body>
 

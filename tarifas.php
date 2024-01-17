@@ -1,0 +1,1 @@
+<p>registra tarifas</p>

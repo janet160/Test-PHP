@@ -9,7 +9,9 @@ function msgPasswordError(){
 }
 
 function msgSave(){
-    alert("Datos guardados correctamente con javascript");
-    
+    alert("Datos guardados correctamente con javascript");   
 }
 
+function loadDiv(div, url){
+    $(div).load(url);
+}

@@ -1,0 +1,1 @@
+<p>registra reportes</p>
