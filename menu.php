@@ -19,6 +19,8 @@ if (!isset($_SESSION['loggedin'])) {
   <link href="css/estilos.css" rel="stylesheet">
   <script src="scripts/js/funciones.js"></script>
   <script src="scripts/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
@@ -69,7 +71,7 @@ if (!isset($_SESSION['loggedin'])) {
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="#" onclick="loadDiv('#contenido','encargados.php');">encargados</a></li>
                 <li><a class="dropdown-item" href="#" onclick="loadDiv('#contenido','reportes.php');">Reportes</a></li>
-                <li><a class="dropdown-item" href="logout.php">Salir</a></li>
+                <li><a class="dropdown-item" href="#" onclick="closeSession ();">Salir</a></li>
 
               </ul>
             </li>

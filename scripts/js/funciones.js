@@ -1,11 +1,42 @@
 function msgError(){
-    alert("Error de usuario con javascript.");
-    window.location.href="index.php"
-};
+    Swal.fire({
+        icon: "error",
+        title: "Usuario incorrecto",
+        showConfirmButton: false,
+        timer: 2000
+    }).then(function() {
+        window.location = "index.php";
+    });
+}
 
 function msgPasswordError(){
-    alert("Error de contraseña con javascript");
-    window.location.href="index.php"
+    Swal.fire({
+        icon: "error",
+        title: "Contraseña incorrecta",
+        showConfirmButton: false,
+        timer: 2000
+    }).then(function() {
+        window.location = "index.php";
+    });
+}
+
+function closeSession(){
+    Swal.fire({
+        title: "Quieres salir del sistema",
+        text: "Seleccciona si para salir",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, Salir",
+        cancelButtonText: "Cancelar"
+    }).then((result) => {
+        if(result.isConfirmed){
+            window.location = "logout.php"
+        }
+    }).catch((error) => {
+        console.log(error);
+    })
 }
 
 function msgSave(){
