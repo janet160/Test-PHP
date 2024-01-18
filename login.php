@@ -37,7 +37,7 @@ if ($stmt = $conexion->prepare('SELECT usuario, contrasena FROM empleados WHERE 
             echo '<script language="javascript">msgPasswordError();</script>';
         }
     } else {
-        echo '<script language="javascript">msgError();</script>';
+        echo '<script>msgError()</script>';
     }
     $stmt->close();
 }

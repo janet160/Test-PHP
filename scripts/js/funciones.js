@@ -15,3 +15,12 @@ function msgSave(){
 function loadDiv(div, url){
     $(div).load(url);
 }
+
+function registrarCliente(){
+    let nombre =$("#nombre").val();
+    let direccion =$("#direccion").val();
+    let telefono =$("#telefono").val();
+    let correo =$("#correo").val();
+    alert(nombre);
+
+}

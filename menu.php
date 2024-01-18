@@ -79,7 +79,13 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
   </header>
   <div id="contenido">
-
+  <div class="row mt-2 px-5">
+    <div class="b-4">
+        <div class="card">
+            <div class="card-body text-center" >
+                <p class="font-weight-bold">Hola tonoto</p>
+        </div>
+    </div>
   </div>
   <script src="scripts/js/bootstrap.bundle.min.js"></script>
 </body>
