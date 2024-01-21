@@ -40,23 +40,46 @@ function closeSession(){
 }
 
 function msgSave(){
-    alert("Datos guardados correctamente con javascript");   
+    Swal.fire({
+        icon: "success",
+        title: "Registro exitoso",
+        showConfirmButton: false,
+        timer: 2000
+    }).then(function() {
+        window.location = "menu.php";
+    });
 }
 
 function loadDiv(div, url){
     $(div).load(url);
 }
 
-function registrarCliente(){
-    var nombre=$("#nombre").val();
-    var direccion=$("#direccion").val();
-    var telefono=$("#telefono").val();
-    var correo=$("#correo").val();
+function registrarCliente() {
+    var nombre = $("#nombre").val();
+    var direccion = $("#direccion").val();
+    var telefono = $("#telefono").val();
+    var correo = $("#correo").val();
 
-    alert(nombre+direccion+telefono+correo);
 
-    $.post("registrarcliente.php",{"nombre":nombre,"direccion":direccion,"telefono":telefono,"correo":correo},function(respuesta){
-        alert(respuesta);
+    $.post("registrarcliente.php", {
+        "nombre": nombre,
+        "direccion": direccion,
+        "telefono": telefono,
+        "correo": correo
+    }, function (respuesta) {
+        // Display an alert message based on the response from the server
+        if (respuesta.trim() === "success") {
+            Swal.fire({
+                icon: "success",
+                title: "Registro exitoso",
+                showConfirmButton: false,
+                timer: 1500
+            })
+        } else {
+            alert("Error al registrar");
+        }
+
+        // Clear input fields regardless of the response
         $("#nombre").val("");
         $("#direccion").val("");
         $("#telefono").val("");
