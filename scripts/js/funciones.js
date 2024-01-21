@@ -48,10 +48,18 @@ function loadDiv(div, url){
 }
 
 function registrarCliente(){
-    let nombre =$("#nombre").val();
-    let direccion =$("#direccion").val();
-    let telefono =$("#telefono").val();
-    let correo =$("#correo").val();
-    alert(nombre);
+    var nombre=$("#nombre").val();
+    var direccion=$("#direccion").val();
+    var telefono=$("#telefono").val();
+    var correo=$("#correo").val();
 
+    alert(nombre+direccion+telefono+correo);
+
+    $.post("registrarcliente.php",{"nombre":nombre,"direccion":direccion,"telefono":telefono,"correo":correo},function(respuesta){
+        alert(respuesta);
+        $("#nombre").val("");
+        $("#direccion").val("");
+        $("#telefono").val("");
+        $("#correo").val("");
+    });
 }
