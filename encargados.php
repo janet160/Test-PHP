@@ -1,5 +1,5 @@
-<div class="row mt-2 px-5 mb-3">
-<div class="col-8 mx-auto my-auto">
+<div class="row mt-2 px-2 mb-3">
+<div class="col  mx-auto my-auto">
         <div class="card">
             <div class="card-body">
                 <p>Encargados </p>
@@ -16,7 +16,7 @@
                         <div class="row">
                         <div class="col">
                         <label for="direccion" class="form-label">Dirección:</label>
-                            <input type="date" id="direccion" name="direccion" class="form-control"
+                            <input type="text" id="direccion" name="direccion" class="form-control"
                                 placeholder="Dirección" />
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                     <div class="row mb-2">
                         <div class="col-lg-6">
                             <label for="telefono" class="form-label">Telefono:</label>
-                            <input type="tel" id="telefonotelefono" name="telefono" class="form-control"
+                            <input type="text" id="telefono" name="telefono" class="form-control"
                                 placeholder="Telefono movil" />
                         </div>
                         <div class="col-lg-6">
@@ -51,7 +51,7 @@
 
                     <div class="row ">
                         <div class="col-lg-6 ">
-                            <button class="btn btn-primary mb-2">Guardar</button>
+                            <input class="btn btn-primary mb-2" value="guardar" type="submit" onclick="registrarEmpleado()"></input>
                         </div>
                     </div>
             </div>

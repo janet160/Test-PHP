@@ -1,5 +1,5 @@
-<div class="row mt-2 px-5 mb-3">
-<div class="col-8 mx-auto my-auto">
+<div class="row mt-2 px-2 mb-3">
+<div class="col mx-auto my-auto">
         <div class="card">
             <div class="card-body">
                 <p>Registro</p>
