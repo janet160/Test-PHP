@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+include '../conexion.php';
 
 $id_vehiculo = $_POST['id_vehiculo'];
 $id_cajon = $_POST['id_cajon'];

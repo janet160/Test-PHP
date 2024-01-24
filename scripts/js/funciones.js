@@ -97,7 +97,7 @@ function registrarVehiculo() {
     var tipo = $("#tipo").val();
     var clienteID = $("#id_cliente").val();
 
-    $.post("registrarVehiculo.php", {
+    $.post("registrar/registrarVehiculo.php", {
         "matricula": matricula,
         "modelo": modelo,
         "color": color,
@@ -134,7 +134,7 @@ function registrarCajon() {
     var numero = $("#numero").val();
     var estatus = $("#estatus").val();
 
-    $.post("registrarCajon.php", {
+    $.post("registrar/registrarCajon.php", {
         "numero": numero,
         "estatus": estatus
     }, function (respuesta) {
@@ -165,12 +165,8 @@ function registrarEmpleado() {
     var correo = $("#correo").val();
     var usuario = $("#usuario").val();
     var contrasena = $("#contrasena").val();
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 0a1009998cc07283141d0b2c47d0c6ba0640d550
-    $.post("registrarEmpleado.php", {
+    $.post("registrar/registrarEmpleado.php", {
         "nombre": nombre,
         "direccion": direccion,
         "telefono": telefono,
@@ -199,15 +195,12 @@ function registrarEmpleado() {
 
     });
 }
-<<<<<<< HEAD
-
-
 
 function registrarTarifa() {
     var tarifa = $("#tarifa").val();
     var monto = $("#monto").val();
 
-    $.post("registrarTarifa.php", {
+    $.post("registrar/registrarTarifa.php", {
         "tarifa": tarifa,
         "monto": monto
     }, function (respuesta) {
@@ -236,7 +229,7 @@ function registrarRegistro() {
     var id_tarifa = $("#id_tarifa").val();
     
 
-    $.post("registrarRegistro.php", {
+    $.post("registrar/registrarRegistro.php", {
 
         "id_vehiculo": id_vehiculo,
         "id_cajon": id_cajon,
@@ -262,7 +255,3 @@ function registrarRegistro() {
 
     });
 }
-
-
-=======
->>>>>>> 0a1009998cc07283141d0b2c47d0c6ba0640d550

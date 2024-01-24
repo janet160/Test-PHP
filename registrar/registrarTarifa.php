@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+include '../conexion.php';
 
 $tarifa = $_POST['tarifa'];
 $monto = $_POST['monto'];

@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+include '../conexion.php';
 
 $numero = $_POST['numero'];
 $estatus = $_POST['estatus'];

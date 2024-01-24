@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+include '../conexion.php';
 
 $matricula = $_POST['matricula'];
 $modelo = $_POST['modelo'];
