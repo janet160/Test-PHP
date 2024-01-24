@@ -87,7 +87,11 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="b-4">
         <div class="card">
             <div class="card-body text-center" >
+<<<<<<< HEAD
               <p>Bienvenido <b><?php echo $nombre ?></b> </p>
+=======
+      <p>Hola tonoto</p>
+>>>>>>> 0a1009998cc07283141d0b2c47d0c6ba0640d550
         </div>
     </div>
   </div>

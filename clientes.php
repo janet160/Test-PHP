@@ -1,10 +1,10 @@
 <script src="scripts/js/funciones.js"></script>
-  <script src="scripts/js/jquery.min.js"></script>
-<div class="row mt-2 px-5 mb-3">
-    <div class="col-8 mx-auto my-auto">
+<script src="scripts/js/jquery.min.js"></script>
+<div class="row mt-2 px-2 mb-3">
+    <div class="col mx-auto my-auto">
         <div class="card">
             <div class="card-body">
-                <p>Clientes </p>
+                <p>Clientes</p>
                 <hr>
                 <form id="frmClientes" name="frmClientes" method="POST"> <!-- FORM-->
                     <div class="row">

@@ -1,5 +1,5 @@
-<div class="row mt-2 px-5">
-    <div class="col-8 mx-auto my-auto"> <!-- Ajusta la clase col-4 según tus necesidades -->
+<div class="row mt-2 px-2">
+    <div class="col mx-auto my-auto"> <!-- Ajusta la clase col-4 según tus necesidades -->
         <div class="card">
             <div class="card-body">
             <p>Cajones</p>
@@ -23,7 +23,7 @@
                     <br>
                     <div class="row">
                         <div class="col-lg-6">
-                            <input class="btn btn-primary mb-2" value="guardar" type="submit" onclick="registrarCajon()"></input>
+                            <button class="btn btn-primary mb-2">Guardar</button>
                         </div>
                     </div>
                 </form>

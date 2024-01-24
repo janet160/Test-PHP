@@ -1,5 +1,5 @@
-<div class="row mt-2 px-5">
-    <div class="col-8 mx-auto my-auto"> <!-- Ajusta la clase col-4 según tus necesidades -->
+<div class="row mt-2 px-2">
+    <div class="col-10 mx-auto my-auto"> <!-- Ajusta la clase col-4 según tus necesidades -->
         <div class="card">
             <div class="card-body">
             <p>Tarifas</p>

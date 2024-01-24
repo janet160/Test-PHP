@@ -165,7 +165,11 @@ function registrarEmpleado() {
     var correo = $("#correo").val();
     var usuario = $("#usuario").val();
     var contrasena = $("#contrasena").val();
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 0a1009998cc07283141d0b2c47d0c6ba0640d550
     $.post("registrarEmpleado.php", {
         "nombre": nombre,
         "direccion": direccion,
@@ -195,6 +199,7 @@ function registrarEmpleado() {
 
     });
 }
+<<<<<<< HEAD
 
 
 
@@ -259,3 +264,5 @@ function registrarRegistro() {
 }
 
 
+=======
+>>>>>>> 0a1009998cc07283141d0b2c47d0c6ba0640d550
