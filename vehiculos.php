@@ -1,10 +1,13 @@
+<script src="scripts/js/funciones.js"></script>
+  <script src="scripts/js/jquery.min.js"></script>
+
 <div class="row mt-2 px-5 mb-3">
 <div class="col-8 mx-auto my-auto">
         <div class="card">
             <div class="card-body">
                 <p>Vehiculos </p>
                 <hr>
-                <form action="" method="post"> <!-- FORM-->
+                <form id="frmVehiculos" name="frmVehiculo" method="post"> <!-- FORM-->
 
                     <div class="row">
                         <div class="col">
@@ -15,7 +18,7 @@
                     </div>
                         <div class="row">
                         <div class="col">
-                        <label for="direccion" class="form-label">Modelo:</label>
+                        <label for="modelo" class="form-label">Modelo:</label>
                             <input type="number" id="modelo" name="modelo" class="form-control"
                                 placeholder="modelo" />
                         </div>
@@ -35,7 +38,7 @@
                         <div class="col-lg-4">
                             <label for="tipo" class="form-label">Tipo:</label>
                             <input type="text" id="tipo" name="tipo" class="form-control"
-                                placeholder="Correo electronico" />
+                                placeholder="Tipo" />
                         </div>
                     </div>
                     <div class="row">
@@ -43,6 +46,14 @@
                             <label for="id_cliente" class="form-label" required>Cliente:</label>
                             <select class="form-control" name="id_cliente" id="id_cliente">
                                 <option value="" select>- SELECCIONA -</option>
+                                <?php
+                                include 'conexion.php';
+                                    $query = "SELECT id_cliente, nombre FROM cliente";
+                                    $ejecutar = $conexion->query($query);
+                                    while($resultado = $ejecutar->fetch_array()){
+                                        echo "<option value='".$resultado['id_cliente']."'>".$resultado['nombre']."</option>";
+                                    }
+                                ?>
                             </select>
                             
                         </div>
@@ -52,7 +63,7 @@
 
                     <div class="row ">
                         <div class="col-lg-6 ">
-                            <button class="btn btn-primary mb-2">Guardar</button>
+                            <input class="btn btn-primary mb-2" onclick="registrarVehiculo()" type="submit" value="guardar"></input>
                         </div>
                     </div>
             </div>

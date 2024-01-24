@@ -8,21 +8,17 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <label for="tarifa" class="form-label" required>Tarifa:</label>
-                            <select class="form-control" name="tarifa" id="tarifa">
-                                <option value="" select>- SELECCIONA -</option>
-                            </select>
+                            <input type="text" name="tarifa" id="tarifa" placeholder="tarifa">
                         </div>
                         <div class="col-lg-12">
                             <label for="monto" class="form-label">Monto</label>
-                            <select class="form-control" name="monto" id="monto">
-                                <option value="" select>- SELECCIONA -</option>
-                            </select>
+                            <input type="text" name="monto" id="monto" onclick="registrarTarifa();" placeholder="monto">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-lg-6">
-                            <button class="btn btn-primary mb-2">Guardar</button>
+                            <input class="btn btn-primary mb-2" value="guardar" type="submit">Guardar</input>
                         </div>
                     </div>
                 </form>

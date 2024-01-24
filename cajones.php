@@ -23,7 +23,7 @@
                     <br>
                     <div class="row">
                         <div class="col-lg-6">
-                            <button class="btn btn-primary mb-2">Guardar</button>
+                            <input class="btn btn-primary mb-2" value="guardar" type="submit" onclick="registrarCajon()"></input>
                         </div>
                     </div>
                 </form>

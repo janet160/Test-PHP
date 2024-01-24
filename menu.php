@@ -1,5 +1,7 @@
 <?php
 session_start();
+$idUsuario=$_SESSION['id'];
+$nombre=$_SESSION['name'];
 
 if (!isset($_SESSION['loggedin'])) {
   echo '<script language="javascript">alert("Debes de iniciar sesión"); window.location.href="index.php"; </script>';
@@ -85,7 +87,7 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="b-4">
         <div class="card">
             <div class="card-body text-center" >
-                <p class="font-weight-bold">Hola tonoto</p>
+              <p>Bienvenido <b><?php echo $nombre ?></b> </p>
         </div>
     </div>
   </div>

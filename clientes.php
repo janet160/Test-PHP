@@ -38,11 +38,17 @@
 
                     <div class="row ">
                         <div class="col-lg-6 ">
-                            <button class="btn btn-primary mb-2" onclick="registrarCliente()" type="submit">Guardar</button>
+                            <input class="btn btn-primary mb-2" onclick="registrarCliente()" type="button" value="guardar"></input>
                         </div>
                     </div>
                 </form>
             </div>    
+    
         </div>
     </div>
+</div>
+<div class="container">
+    <?php
+    include './consultar/consultarCliente.php'
+    ?>
 </div>
