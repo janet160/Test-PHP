@@ -31,3 +31,9 @@
         </div>
     </div>
 </div>
+
+<div class="container" id="result">
+    <?php
+    include './consultar/consultarCajon.php'
+    ?>
+</div>

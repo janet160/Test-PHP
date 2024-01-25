@@ -89,10 +89,17 @@
 
                     <div class="row ">
                         <div class="col-lg-6 ">
-                            <input class="btn btn-primary mb-2" onclick="registrarRegistro();" type="submit" value="Guardarx">Guardar</input>
+                            <input class="btn btn-primary mb-2" onclick="registrarRegistro();" type="submit" value="Guardar"></input>
                         </div>
                     </div>
             </div>
             </form>
         </div>
     </div>
+
+
+    <div class="container">
+    <?php
+    include './consultar/consultarRegistros.php'
+    ?>
+</div>

@@ -1,13 +1,11 @@
 <script src="scripts/js/funciones.js"></script>
   <script src="scripts/js/jquery.min.js"></script>
 
-<<<<<<< HEAD
 <div class="row mt-2 px-5 mb-3">
 <div class="col-8 mx-auto my-auto">
-=======
+
 <div class="row mt-2 px-2 mb-3">
 <div class="col mx-auto my-auto">
->>>>>>> 0a1009998cc07283141d0b2c47d0c6ba0640d550
         <div class="card">
             <div class="card-body">
                 <p>Vehiculos </p>
@@ -56,7 +54,7 @@
                                     $query = "SELECT id_cliente, nombre FROM cliente";
                                     $ejecutar = $conexion->query($query);
                                     while($resultado = $ejecutar->fetch_array()){
-                                        echo "<option value='".$resultado['id_cliente']."'>".$resultado['nombre']."</option>";
+                                        echo "<option value='".$resultado['id_vehiculo']."'>".$resultado['nombre']."</option>";
                                     }
                                 ?>
                             </select>
@@ -68,14 +66,17 @@
 
                     <div class="row ">
                         <div class="col-lg-6 ">
-<<<<<<< HEAD
                             <input class="btn btn-primary mb-2" onclick="registrarVehiculo()" type="submit" value="guardar"></input>
-=======
-                            <input class="btn btn-primary mb-2" onclick="registrarVehiculo()" value="guardar"></input>
->>>>>>> 0a1009998cc07283141d0b2c47d0c6ba0640d550
+
+
                         </div>
                     </div>
             </div>
             </form>
         </div>
     </div>
+    <div class="container">
+    <?php
+    include './consultar/consultarVehiculo.php'
+    ?>
+</div>

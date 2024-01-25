@@ -1,3 +1,7 @@
+<?php
+include 'conexion.php'
+?>
+
 <div class="row mt-2 px-2">
     <div class="col-10 mx-auto my-auto"> <!-- Ajusta la clase col-4 según tus necesidades -->
         <div class="card">
@@ -18,11 +22,17 @@
                     <br>
                     <div class="row">
                         <div class="col-lg-6">
-                            <input class="btn btn-primary mb-2" value="guardar" type="submit">Guardar</input>
+                            <input class="btn btn-primary mb-2" value="guardar" type="submit"></input>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+</div>
+
+<div class="container">
+    <?php
+    include './consultar/consultarTarifa.php'
+    ?>
 </div>

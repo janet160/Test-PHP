@@ -1,3 +1,7 @@
+<?php
+include 'conexion.php'
+?>
+
 <div class="row mt-2 px-2 mb-3">
 <div class="col  mx-auto my-auto">
         <div class="card">
@@ -24,11 +28,8 @@
                     <div class="row mb-2">
                         <div class="col-lg-6">
                             <label for="telefono" class="form-label">Telefono:</label>
-<<<<<<< HEAD
-                            <input type="tel" id="telefono" name="telefono" class="form-control"
-=======
+                            <input type="tel" id="telefono" name="telefono" class="form-control">
                             <input type="text" id="telefono" name="telefono" class="form-control"
->>>>>>> 0a1009998cc07283141d0b2c47d0c6ba0640d550
                                 placeholder="Telefono movil" />
                         </div>
                         <div class="col-lg-6">
@@ -62,3 +63,10 @@
             </form>
         </div>
     </div>
+
+    
+<div class="container">
+    <?php
+    include './consultar/consultarEncargados.php'
+    ?>
+</div>

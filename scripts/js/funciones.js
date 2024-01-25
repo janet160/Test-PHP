@@ -255,3 +255,51 @@ function registrarRegistro() {
 
     });
 }
+
+
+function eliminarCajon(id_cajon){
+    $.post("eliminar/eliminarCajon.php",{
+        
+        "id_cajon":id_cajon
+        
+    },function(result){
+        alert(result)
+    })
+    loadDiv($("#result"), 'consultar/consultarCajon.php')
+}
+function eliminarRegistro(id_registro){
+    $.post("eliminar/eliminarRegistro.php",{
+        
+        "id_registro":id_registro
+        
+    },function(result){
+        alert(result)
+    })
+}
+function eliminarCliente(id_cliente){
+    $.post("eliminar/eliminarRegistro.php",{
+        
+        "id_cliente":id_cliente
+        
+    },function(result){
+        alert(result)
+    })
+}
+function eliminarVehiculo(id_vehiculo){
+    $.post("eliminar/eliminarRegistro.php",{
+        
+        "id_vehiculo":id_vehiculo
+        
+    },function(result){
+        alert(result)
+    })
+}
+function eliminarTarifa(id_tarifa){
+    $.post("eliminar/eliminarRegistro.php",{
+        
+        "id_tarifa":id_tarifa
+        
+    },function(result){
+        alert(result)
+    })
+}
