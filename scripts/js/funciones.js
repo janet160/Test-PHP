@@ -310,7 +310,7 @@ function eliminarCliente(id_cliente) {
           else {
             alert("Error al eliminar");
         }
-        loadDiv($("#result"), 'consultar/consultarCliente.php')
+        loadDiv($("#result"), 'consultarCliente.php')
     })
 
     
@@ -333,7 +333,7 @@ function eliminarEmpleado(id_empleado) {
           else {
             alert("Error al eliminar");
         }
-        loadDiv($("#result"), 'consultar/consultarEncargados.php')
+        loadDiv($("#result"), 'consultarEncargados.php')
     })
 
     
@@ -378,6 +378,6 @@ function eliminarTarifa(id_tarifa) {
           else {
             alert("Error al eliminar");
         }
-        loadDiv($("#result"), 'consultarCTarifa.php')
+        loadDiv($("#result"), 'consultarTarifa.php')
 })
 }
