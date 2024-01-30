@@ -3,13 +3,18 @@ include '../conexion.php';
 
 $id_cliente = $_POST['id_cliente'];
 
-$sql = "DELETE FROM cliente WHERE id_cliente='".$id_cliente."'";
-if($datos = mysqli_query($conexion, $sql)){
-    echo "Eliminado";
-}
-else{
-echo "No eliminado";
+
+$stmt = $conexion->prepare("DELETE FROM cliente WHERE id_cliente='".$id_cliente."'");
+// $stmt->bind_param("ss", $tarifa, $monto);
+$result = $stmt->execute();
+if ($result) {
+    echo "success";
+} else {
+    echo "error";
 }
 
+$stmt->close();
+$conexion->close();
 
 ?>
+

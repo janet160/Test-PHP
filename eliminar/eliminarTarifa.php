@@ -3,13 +3,17 @@ include '../conexion.php';
 
 $id_tarifa = $_POST['id_tarifa'];
 
-$sql = "DELETE FROM tarifa WHERE id_tarifa='".$id_tarifa."'";
-if($datos = mysqli_query($conexion, $sql)){
-    echo "Eliminado";
-}
-else{
-echo "No eliminado";
+
+$stmt = $conexion->prepare("DELETE FROM tarifa WHERE id_tarifa='".$id_tarifa."'");
+// $stmt->bind_param("ss", $tarifa, $monto);
+$result = $stmt->execute();
+if ($result) {
+    echo "success";
+} else {
+    echo "error";
 }
 
+$stmt->close();
+$conexion->close();
 
 ?>

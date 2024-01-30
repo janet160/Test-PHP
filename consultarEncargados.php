@@ -24,7 +24,7 @@
                 <td>".$result['usuario']."</td>
                 <td>".$result['contrasena']."</td>
                 <td><a href='' onclick='eliminarEmpleado(".$result['id_empleado'].")'>Editar</a></td>
-                <td><a href='' onclick='eliminarEmpleado(".$result['id_empleado'].")'>Eliminar</a></td>
+                <td><a href='#' onclick='eliminarEmpleado(".$result['id_empleado'].")'>Eliminar</a></td>
                 </tr>";
             }
             ?>

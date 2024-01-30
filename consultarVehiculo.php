@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             <?php
-
+            include 'conexion.php';
             $query="SELECT * FROM vehiculos";
             $ejecutar=$conexion->query($query);
             while($result=$ejecutar->fetch_array()){
@@ -22,7 +22,7 @@
                 <td>".$result['puertas']."</td>
                 <td>".$result['tipo']."</td>
                 <td>".$result['id_cliente']."</td>
-                <td><a href='' onclick='eliminarVehiculo(".$result['id_vehiculo'].")'>Eliminar</a></td>
+                <td><a href='#' onclick='eliminarVehiculo(".$result['id_vehiculo'].")'>Eliminar</a></td>
                 </tr>";
             }
             ?>

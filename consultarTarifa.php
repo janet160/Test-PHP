@@ -8,7 +8,7 @@
         </thead>
         <tbody>
             <?php
-
+    include 'conexion.php';
             $query="SELECT * FROM tarifa";
             $ejecutar=$conexion->query($query);
             while($result=$ejecutar->fetch_array()){
@@ -16,7 +16,7 @@
                 <td>".$result['tarifa']."</td>
                 <td>".$result['monto']."</td>
                 <td><a href='' onclick='editarCliente()'".$result['id_tarifa']."</td>
-                <td><a href='' onclick='eliminarTarifa(".$result['id_tarifa'].")'>Eliminar</a></td>
+                <td><a href='#' onclick='eliminarTarifa(".$result['id_tarifa'].")'>Eliminar</a></td>
                 </tr>";
             }
             ?>

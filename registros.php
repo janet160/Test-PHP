@@ -68,7 +68,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container" id="result">
     <?php
     include './consultarRegistros.php'
     ?>

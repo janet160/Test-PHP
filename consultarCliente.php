@@ -20,7 +20,7 @@
                 <td>".$result['telefono']."</td>
                 <td>".$result['correo']."</td>
                 <td><a href='' onclick='editarCliente()'".$result['id_cliente']."</td>
-                <td><a href='' onclick='eliminarCliente(".$result['id_cliente'].")'>Eliminar</a></td>
+                <td><a href='#' onclick='eliminarCliente(".$result['id_cliente'].")'>Eliminar</a></td>
                 </tr>";
             }
             ?>

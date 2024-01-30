@@ -14,6 +14,7 @@
         </thead>
         <tbody>
             <?php
+            include 'conexion.php';
 
             $query="SELECT * FROM registro";
             $ejecutar=$conexion->query($query);
@@ -29,7 +30,7 @@
                 <td>".$result['id_empleado']."</td>
                 <td>".$result['id_tarifa']."</td>
 
-                <td><a href='' onclick='eliminarRegistro(".$result['id_registro'].")'>Eliminar</a></td>
+                <td><a href='#' onclick='eliminarRegistro(".$result['id_registro'].")'>Eliminar</a></td>
                 </tr>";
             }
             ?>

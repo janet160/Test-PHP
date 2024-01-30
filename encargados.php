@@ -64,7 +64,7 @@ include 'conexion.php'
     </div>
 
     
-<div class="container">
+    <div class="container" id="result">
     <?php
     include './consultarEncargados.php'
     ?>

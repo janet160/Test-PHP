@@ -75,7 +75,7 @@
             </form>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="result">
     <?php
     include './consultarVehiculo.php'
     ?>
