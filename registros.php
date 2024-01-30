@@ -37,31 +37,6 @@
                         </div>
                     </div>
 
-                    <!-- <div class="row mb-2">
-                        <div class="col-lg-6">
-                            <label for="fechaIngreso" class="form-label">Fecha de ingreso</label>
-                            <input type="date" id="fechaIngreso" name="fechaIngreso" class="form-control"
-                                placeholder="Usuario o correo" />
-                        </div>
-                        <div class="col-lg-6">
-                            <label for="horaIngreso" class="form-label">Hora de ingreso</label>
-                            <input type="date" id="horaIngreso" name="horaIngreso" class="form-control"
-                                placeholder="Usuario o correo" />
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="row mb-2">
-                        <div class="col-lg-6">
-                            <label for="fechaSalida" class="form-label">Fecha de salida</label>
-                            <input type="date" id="fechaSalida" name="fechaSalida" class="form-control"
-                                placeholder="Usuario o correo" />
-                        </div>
-                        <div class="col-lg-6">
-                            <label for="horaSalida" class="form-label">Hora de salida</label>
-                            <input type="date" id="horaSalida" name="horaSalida" class="form-control"
-                                placeholder="Usuario o correo" />
-                        </div>
-                    </div> -->
 
                     <div class="row">
                         <div class="col-lg-6">
@@ -73,23 +48,18 @@
                                     $query = "SELECT id_tarifa, tarifa FROM tarifa";
                                     $ejecutar = $conexion->query($query);
                                     while($resultado = $ejecutar->fetch_array()){
-                                        echo "<option value='".$resultado['it_tarifa']."'>".$resultado['tarifa']."</option>";
+                                        echo "<option value='".$resultado['id_tarifa']."'>".$resultado['tarifa']."</option>";
                                     }
                                 ?>
                             </select>
                         </div>
-                        <!-- <div class="col-lg-6">
-                            <label for="id_empleado" class="form-label" required>Empleado:</label>
-                            <select class="form-control" name="id_empleado" id="id_empleado">
-                                <option value="" select>- SELECCIONA -</option>
-                            </select>
-                        </div> -->
+
                     </div>
                     <br>
 
                     <div class="row ">
                         <div class="col-lg-6 ">
-                            <input class="btn btn-primary mb-2" onclick="registrarRegistro();" type="submit" value="Guardar"></input>
+                            <input class="btn btn-primary mb-2" onclick="registrarRegistro();" type="button" value="Guardar"></input>
                         </div>
                     </div>
             </div>
@@ -100,6 +70,6 @@
 
     <div class="container">
     <?php
-    include './consultar/consultarRegistros.php'
+    include './consultarRegistros.php'
     ?>
 </div>

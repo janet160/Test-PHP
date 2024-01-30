@@ -28,7 +28,6 @@ include 'conexion.php'
                     <div class="row mb-2">
                         <div class="col-lg-6">
                             <label for="telefono" class="form-label">Telefono:</label>
-                            <input type="tel" id="telefono" name="telefono" class="form-control">
                             <input type="text" id="telefono" name="telefono" class="form-control"
                                 placeholder="Telefono movil" />
                         </div>
@@ -67,6 +66,6 @@ include 'conexion.php'
     
 <div class="container">
     <?php
-    include './consultar/consultarEncargados.php'
+    include './consultarEncargados.php'
     ?>
 </div>

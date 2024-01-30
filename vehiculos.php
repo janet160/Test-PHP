@@ -54,7 +54,7 @@
                                     $query = "SELECT id_cliente, nombre FROM cliente";
                                     $ejecutar = $conexion->query($query);
                                     while($resultado = $ejecutar->fetch_array()){
-                                        echo "<option value='".$resultado['id_vehiculo']."'>".$resultado['nombre']."</option>";
+                                        echo "<option value='".$resultado['id_cliente']."'>".$resultado['nombre']."</option>";
                                     }
                                 ?>
                             </select>
@@ -66,7 +66,7 @@
 
                     <div class="row ">
                         <div class="col-lg-6 ">
-                            <input class="btn btn-primary mb-2" onclick="registrarVehiculo()" type="submit" value="guardar"></input>
+                            <input class="btn btn-primary mb-2" onclick="registrarVehiculo()" type="button" value="guardar"></input>
 
 
                         </div>
@@ -77,6 +77,6 @@
     </div>
     <div class="container">
     <?php
-    include './consultar/consultarVehiculo.php'
+    include './consultarVehiculo.php'
     ?>
 </div>

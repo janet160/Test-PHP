@@ -47,8 +47,8 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" id="result">
     <?php
-    include './consultar/consultarCliente.php'
+    include 'consultarCliente.php'
     ?>
 </div>

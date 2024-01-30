@@ -11,19 +11,11 @@
                             <input type="number" id="numero" name="numero" min="1" class="form-control"
                                 placeholder="Numero de cajon" />
                         </div>
-                        <div class="col-lg-12">
-                            <label for="estatus" class="form-label">Estatus</label>
-                            <select class="form-control" name="estatus" id="estatus">
-                                <option value="" select>- SELECCIONA -</option>
-                                <option value="">Ocupado-</option>
-                                <option value="">Libre</option>
-                            </select>
-                        </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-lg-6">
-                            <button class="btn btn-primary mb-2">Guardar</button>
+                            <input class="btn btn-primary mb-2" onclick="registrarCajon()" value="Guardar" type ="button"/>
                         </div>
                     </div>
                 </form>
@@ -34,6 +26,6 @@
 
 <div class="container" id="result">
     <?php
-    include './consultar/consultarCajon.php'
+    include './consultarCajon.php'
     ?>
 </div>

@@ -12,17 +12,17 @@ include 'conexion.php'
                     <div class="row">
                         <div class="col-lg-12">
                             <label for="tarifa" class="form-label" required>Tarifa:</label>
-                            <input type="text" name="tarifa" id="tarifa" placeholder="tarifa">
+                            <input type="text" class="form-control" name="tarifa" id="tarifa" placeholder="tarifa">
                         </div>
                         <div class="col-lg-12">
                             <label for="monto" class="form-label">Monto</label>
-                            <input type="text" name="monto" id="monto" onclick="registrarTarifa();" placeholder="monto">
+                            <input type="text" class="form-control" name="monto" id="monto" placeholder="monto">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-lg-6">
-                            <input class="btn btn-primary mb-2" value="guardar" type="submit"></input>
+                            <input class="btn btn-primary mb-2" value="guardar" onclick="registrarTarifa()" type="button"></input>
                         </div>
                     </div>
                 </form>
@@ -33,6 +33,6 @@ include 'conexion.php'
 
 <div class="container">
     <?php
-    include './consultar/consultarTarifa.php'
+    include './consultarTarifa.php'
     ?>
 </div>

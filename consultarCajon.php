@@ -12,7 +12,7 @@
             while($result=$ejecutar->fetch_array()){
                 echo "<tr>  
                 <td>".$result['numero']."</td>
-                <td><a href='' onclick='eliminarCajon(".$result['id_cajon'].")'>Eliminar</a></td>
+                <td><a href='#' onclick='eliminarCajon(".$result['id_cajon'].")'>Eliminar</a></td>
                 </tr>";
             }
             ?>
