@@ -65,10 +65,5 @@ while($result=$ejecutar->fetch_array()){
         </div>
     </div>
 </div>
-<div class="container" id="result">
-    <?php
-    include 'consultarCliente.php'
-    ?>
-</div>
 
 <?php }?>

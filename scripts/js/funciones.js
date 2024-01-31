@@ -102,7 +102,6 @@ function registrarVehiculo() {
     var tipo = $("#tipo").val();
     var id_cliente = $("#id_cliente").val();
 
-    alert(matricula + modelo + color + puertas + tipo + id_cliente)
     $.post("registrar/registrarVehiculo.php", {
         "matricula": matricula,
         "modelo": modelo,
@@ -414,7 +413,7 @@ function actualizarRegistro(id_registro) {
 }
 
 function actualizarTarifa(id_tarifa) {
-    $.post('actualizarTarifa.php', {
+    $.post('actualizarTarifa.php', {    
         "id_tarifa": id_tarifa
     }, function (respuesta) {
         contenido.innerHTML = respuesta
@@ -428,7 +427,6 @@ function actualizarVehiculo(id_vehiculo) {
         contenido.innerHTML = respuesta
     })
 }
-
 
 function modificarCliente(id_cliente) {
     var nombre = $("#nombre").val();
@@ -451,5 +449,45 @@ function modificarCliente(id_cliente) {
             alert("Error al eliminar");
         }
         loadDiv($("#contenido"), 'cliente.php')
+    });
+}
+
+function modificarVehiculo(id_cliente) {
+    var matricula = $("#matricula").val();
+    var modelo = $("#modelo").val();
+    var color = $("#color").val();
+    var puertas = $("#puertas").val();
+    var tipo = $("#tipo").val();
+    var id_cliente = $("#id_cliente").val();
+
+    $.post("actualizar/modificarVehiculo.php", {
+        "matricula": matricula,
+        "modelo": modelo,
+        "color": color,
+        "puertas": puertas,
+        "tipo": tipo,
+        "id_cliente": id_cliente
+
+    }, function (respuesta) {
+        // Display an alert message based on the response from the server
+        if (respuesta.trim() === "success") {
+            Swal.fire({
+                icon: "success",
+                title: "Registro exitoso",
+                showConfirmButton: false,
+                timer: 1500
+            })
+        } else {
+            alert("Error al registrar");
+        }
+
+        $("#matricula").val("");
+        $("#modelo").val("");
+        $("#color").val("");
+        $("#puertas").val("");
+        $("#tipo").val("");
+        $("#id_cliente").val("");
+
+        loadDiv($("#result"), 'consultarVehiculo.php')
     });
 }
