@@ -10,6 +10,7 @@
             <th scope="col">hora de salida</th>
             <th scope="col">Empleado</th>
             <th scope="col">Tarifa</th>
+            <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
         </thead>
         <tbody>
@@ -29,7 +30,7 @@
                 <td>".$result['horaSalida']."</td>
                 <td>".$result['id_empleado']."</td>
                 <td>".$result['id_tarifa']."</td>
-
+                <td><a href='#' onclick='actualizarRegistro(".$result['id_registro'].")'>Actualizar</a></td>
                 <td><a href='#' onclick='eliminarRegistro(".$result['id_registro'].")'>Eliminar</a></td>
                 </tr>";
             }

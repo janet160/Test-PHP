@@ -15,7 +15,7 @@
                 echo "<tr>  
                 <td>".$result['tarifa']."</td>
                 <td>".$result['monto']."</td>
-                <td><a href='' onclick='editarCliente()'".$result['id_tarifa']."</td>
+                <td><a href='' onclick='actualizarTarifa(".$result['id_tarifa'].")'>Editar</a></td>
                 <td><a href='#' onclick='eliminarTarifa(".$result['id_tarifa'].")'>Eliminar</a></td>
                 </tr>";
             }

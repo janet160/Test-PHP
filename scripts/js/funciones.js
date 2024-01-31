@@ -39,6 +39,12 @@ function closeSession() {
     })
 }
 
+function cancelarOperacion() {
+
+    window.location = "menu.php";
+
+}
+
 function msgSave() {
     Swal.fire({
         icon: "success",
@@ -96,7 +102,7 @@ function registrarVehiculo() {
     var tipo = $("#tipo").val();
     var id_cliente = $("#id_cliente").val();
 
-    alert(matricula+ modelo+ color+ puertas+ tipo+ id_cliente)
+    alert(matricula + modelo + color + puertas + tipo + id_cliente)
     $.post("registrar/registrarVehiculo.php", {
         "matricula": matricula,
         "modelo": modelo,
@@ -104,7 +110,7 @@ function registrarVehiculo() {
         "puertas": puertas,
         "tipo": tipo,
         "id_cliente": id_cliente
-        
+
     }, function (respuesta) {
         // Display an alert message based on the response from the server
         if (respuesta.trim() === "success") {
@@ -137,7 +143,7 @@ function registrarCajon() {
     }, function (respuesta) {
         // Display an alert message based on the response from the server
         if (respuesta.trim() === "success") {
-            Swal.fire({ 
+            Swal.fire({
                 icon: "success",
                 title: "Registro exitoso",
                 showConfirmButton: false,
@@ -147,7 +153,7 @@ function registrarCajon() {
             alert("Error al registrar");
         }
         $("#numero").val("");
-    
+
         loadDiv($("#result"), 'consultarCajon.php')
     });
 }
@@ -221,7 +227,7 @@ function registrarRegistro() {
     var id_vehiculo = $("#id_vehiculo").val();
     var id_cajon = $("#id_cajon").val();
     var id_tarifa = $("#id_tarifa").val();
-alert(id_vehiculo+ id_cajon+ id_tarifa)
+
 
     $.post("registrar/registrarRegistros.php", {
 
@@ -256,20 +262,20 @@ function eliminarCajon(id_cajon) {
         "id_cajon": id_cajon
 
     }, function (result) {
-        if(result.trim() === "success"){
-        Swal.fire({
-            icon: "warning",
-            title: "Cajon eliminado",
-            showConfirmButton: false,
-            timer: 1500
-        })
-      }
-      else {
-        alert("Error al eliminar");
-    }
-    loadDiv($("#result"), 'consultarCajon.php')
-})
-    
+        if (result.trim() === "success") {
+            Swal.fire({
+                icon: "warning",
+                title: "Cajon eliminado",
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+        else {
+            alert("Error al eliminar");
+        }
+        loadDiv($("#result"), 'consultarCajon.php')
+    })
+
 }
 function eliminarRegistro(id_registro) {
     $.post("eliminar/eliminarRegistro.php", {
@@ -277,20 +283,20 @@ function eliminarRegistro(id_registro) {
         "id_registro": id_registro
 
     }, function (result) {
-        if(result.trim() === "success"){
+        if (result.trim() === "success") {
             Swal.fire({
                 icon: "warning",
                 title: "Cajon eliminado",
                 showConfirmButton: false,
                 timer: 1500
             })
-          }
-          else {
+        }
+        else {
             alert("Error al eliminar");
         }
         loadDiv($("#result"), 'consultarRegistros.php')
     })
-    
+
 }
 
 function eliminarCliente(id_cliente) {
@@ -299,21 +305,21 @@ function eliminarCliente(id_cliente) {
         "id_cliente": id_cliente
 
     }, function (result) {
-        if(result.trim() === "success"){
+        if (result.trim() === "success") {
             Swal.fire({
                 icon: "warning",
                 title: "Cajon eliminado",
                 showConfirmButton: false,
                 timer: 1500
             })
-          }
-          else {
+        }
+        else {
             alert("Error al eliminar");
         }
         loadDiv($("#result"), 'consultarCliente.php')
     })
 
-    
+
 }
 
 function eliminarEmpleado(id_empleado) {
@@ -322,21 +328,21 @@ function eliminarEmpleado(id_empleado) {
         "id_empleado": id_empleado
 
     }, function (result) {
-        if(result.trim() === "success"){
+        if (result.trim() === "success") {
             Swal.fire({
                 icon: "warning",
                 title: "Cajon eliminado",
                 showConfirmButton: false,
                 timer: 1500
             })
-          }
-          else {
+        }
+        else {
             alert("Error al eliminar");
         }
         loadDiv($("#result"), 'consultarEncargados.php')
     })
 
-    
+
 }
 
 function eliminarVehiculo(id_vehiculo) {
@@ -345,20 +351,20 @@ function eliminarVehiculo(id_vehiculo) {
         "id_vehiculo": id_vehiculo
 
     }, function (result) {
-        if(result.trim() === "success"){
+        if (result.trim() === "success") {
             Swal.fire({
                 icon: "warning",
                 title: "Cajon eliminado",
                 showConfirmButton: false,
                 timer: 1500
             })
-          }
-          else {
+        }
+        else {
             alert("Error al eliminar");
         }
         loadDiv($("#result"), 'consultarVehiculo.php')
     })
-    
+
 }
 
 function eliminarTarifa(id_tarifa) {
@@ -367,17 +373,83 @@ function eliminarTarifa(id_tarifa) {
         "id_tarifa": id_tarifa
 
     }, function (result) {
-        if(result.trim() === "success"){
+        if (result.trim() === "success") {
             Swal.fire({
                 icon: "warning",
                 title: "Cajon eliminado",
                 showConfirmButton: false,
                 timer: 1500
             })
-          }
-          else {
+        }
+        else {
             alert("Error al eliminar");
         }
         loadDiv($("#result"), 'consultarTarifa.php')
-})
+    })
+}
+
+
+function editarCliente(id_cliente) {
+    $.post('actualizarCliente.php', {
+        "id_cliente": id_cliente
+    }, function (respuesta) {
+        contenido.innerHTML = respuesta
+    })
+}
+
+function actualizarEmpleado(id_empleado) {
+    $.post('actualizarEmpleado.php', {
+        "id_empleado": id_empleado
+    }, function (respuesta) {
+        contenido.innerHTML = respuesta
+    })
+}
+
+function actualizarRegistro(id_registro) {
+    $.post('actualizarRegistro.php', {
+        "id_registro": id_registro
+    }, function (respuesta) {
+        contenido.innerHTML = respuesta
+    })
+}
+
+function actualizarTarifa(id_tarifa) {
+    $.post('actualizarTarifa.php', {
+        "id_tarifa": id_tarifa
+    }, function (respuesta) {
+        contenido.innerHTML = respuesta
+    })
+}
+
+function actualizarVehiculo(id_vehiculo) {
+    $.post('actualizarVehiculo.php', {
+        "id_vehiculo": id_vehiculo
+    }, function (respuesta) {
+        contenido.innerHTML = respuesta
+    })
+}
+
+
+function modificarCliente(id_cliente) {
+    var nombre = $("#nombre").val();
+    var direccion = $("#direccion").val();
+    var telefono = $("#telefono").val();
+    var correo = $("#correo").val();
+    // alert(id_cliente);
+
+    $.post("actualizar/modificarCliente.php", {
+        "id_cliente": id_cliente,
+        "nombre": nombre,
+        "direccion": direccion,
+        "telefono": telefono,
+        "correo": correo
+    }, function (result) {
+        if (result.trim() === "success") {
+           alert('Actualizado correctamente');
+        }
+        else {
+            alert("Error al eliminar");
+        }
+        loadDiv($("#contenido"), 'cliente.php')
+    });
 }

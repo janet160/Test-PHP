@@ -29,9 +29,8 @@
 
                     <div class="row mb-2">
                         <div class="col-lg-4">
-                            <label for="color" class="form-label">Color :</label>
-                            <input type="text" id="color" name="color" class="form-control"
-                                placeholder="Telefono movil" />
+                        <label for="color">Selecciona un color:</label>
+                    <input type="color" id="color" name="color" class="form-control">
                         </div>
                         <div class="col-lg-4">
                             <label for="puertas" class="form-label">Puertas:</label>
@@ -49,6 +48,7 @@
                             <label for="id_cliente" class="form-label" required>Cliente:</label>
                             <select class="form-control" name="id_cliente" id="id_cliente">
                                 <option value="" select>- SELECCIONA -</option>
+                                <hr>
                                 <?php
                                 include 'conexion.php';
                                     $query = "SELECT id_cliente, nombre FROM cliente";

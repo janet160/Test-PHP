@@ -7,6 +7,7 @@
             <th scope="col">Puertas</th>
             <th scope="col">Tipo</th>
             <th scope="col">Cliente</th>
+            <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
         </thead>
         <tbody>
@@ -18,10 +19,11 @@
                 echo "<tr>  
                 <td>".$result['matricula']."</td>
                 <td>".$result['modelo']."</td>
-                <td>".$result['color']."</td>
+                <td style='background-color:".$result['color']."'></td>
                 <td>".$result['puertas']."</td>
                 <td>".$result['tipo']."</td>
                 <td>".$result['id_cliente']."</td>
+                <td><a href='#' onclick='actualizarVehiculo(".$result['id_vehiculo'].")'>Editar</a></td>
                 <td><a href='#' onclick='eliminarVehiculo(".$result['id_vehiculo'].")'>Eliminar</a></td>
                 </tr>";
             }
