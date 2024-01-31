@@ -27,7 +27,7 @@ while($result=$ejecutar->fetch_array()){
                     <div class="row">
                         <div class="col-lg-6">
                         <a href='#' class="btn btn-warning mb-2" onclick="cancelarOperacion();">Cancelar</a>
-                            <input class="btn btn-danger mb-2" value="Actualizar" onclick="modificarTarifa()" type="button"></input>
+                            <input class="btn btn-danger mb-2" value="Actualizar" onclick="modificarTarifa(<?php echo $result['id_tarifa']?>)" type="button"></input>
                         </div>
                     </div>
                 </form>

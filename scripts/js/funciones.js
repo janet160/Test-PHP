@@ -448,11 +448,11 @@ function modificarCliente(id_cliente) {
         else {
             alert("Error al eliminar");
         }
-        loadDiv($("#contenido"), 'cliente.php')
+        loadDiv($("#contenido"), 'clientes.php')
     });
 }
 
-function modificarVehiculo(id_cliente) {
+function modificarVehiculo(id_vehiculo) {
     var matricula = $("#matricula").val();
     var modelo = $("#modelo").val();
     var color = $("#color").val();
@@ -461,6 +461,7 @@ function modificarVehiculo(id_cliente) {
     var id_cliente = $("#id_cliente").val();
 
     $.post("actualizar/modificarVehiculo.php", {
+        "id_vehiculo":id_vehiculo,
         "matricula": matricula,
         "modelo": modelo,
         "color": color,
@@ -468,26 +469,84 @@ function modificarVehiculo(id_cliente) {
         "tipo": tipo,
         "id_cliente": id_cliente
 
-    }, function (respuesta) {
-        // Display an alert message based on the response from the server
-        if (respuesta.trim() === "success") {
-            Swal.fire({
-                icon: "success",
-                title: "Registro exitoso",
-                showConfirmButton: false,
-                timer: 1500
-            })
-        } else {
-            alert("Error al registrar");
+    },function (result) {
+        if (result.trim() === "success") {
+           alert('Actualizado correctamente');
         }
+        else {
+            alert("Error al eliminar");
+        }
+        loadDiv($("#contenido"), 'vehiculos.php')
+    });
+}
 
-        $("#matricula").val("");
-        $("#modelo").val("");
-        $("#color").val("");
-        $("#puertas").val("");
-        $("#tipo").val("");
-        $("#id_cliente").val("");
 
-        loadDiv($("#result"), 'consultarVehiculo.php')
+function modificarTarifa(id_tarifa) {
+    var tarifa = $("#tarifa").val();
+    var monto = $("#monto").val();
+
+    $.post("actualizar/modificarTarifa.php", {
+        "id_tarifa":id_tarifa,
+        "tarifa": tarifa,
+        "monto": monto
+    },function (result) {
+        if (result.trim() === "success") {
+           alert('Actualizado correctamente');
+        }
+        else {
+            alert("Error al eliminar");
+        }
+        loadDiv($("#contenido"), 'tarifas.php')
+    });
+}
+
+function modificarRegistro(id_registro) {
+
+    var id_vehiculo = $("#id_vehiculo").val();
+    var id_cajon = $("#id_cajon").val();
+    var id_tarifa = $("#id_tarifa").val();
+
+
+    $.post("actualizar/modificarRegistro.php", {
+        "id_registro":id_registro,
+        "id_vehiculo": id_vehiculo,
+        "id_cajon": id_cajon,
+        "id_tarifa": id_tarifa,
+
+    },function (result) {
+        if (result.trim() === "success") {
+           alert('Actualizado correctamente');
+        }
+        else {
+            alert("Error al editar");
+        }
+        loadDiv($("#contenido"), 'registros.php')
+    });
+}
+
+function modificarEmpleado(id_empleado) {
+    var nombre = $("#nombre").val();
+    var direccion = $("#direccion").val();
+    var telefono = $("#telefono").val();
+    var correo = $("#correo").val();
+    var usuario = $("#usuario").val();
+    var contrasena = $("#contrasena").val();
+
+    $.post("actualizar/modificarEmpleado.php", {
+        "id_empleado":id_empleado,
+        "nombre": nombre,
+        "direccion": direccion,
+        "telefono": telefono,
+        "correo": correo,
+        "usuario": usuario,
+        "contrasena": contrasena
+    },function (result) {
+        if (result.trim() === "success") {
+           alert('Actualizado correctamente');
+        }
+        else {
+            alert("Error al eliminar");
+        }
+        loadDiv($("#contenido"), 'encargados.php')
     });
 }
