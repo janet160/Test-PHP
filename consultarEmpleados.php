@@ -2,7 +2,7 @@
     <table class="table">
         <thead class="table-dark">
             <th scope="col">Nombre</th>
-            <th scope="col">Direccion</th>
+            <th scope="col">Dirección</th>
             <th scope="col">Telefono</th>
             <th scope="col">Correo</th>
             <th scope="col">Usuario</th>
@@ -13,7 +13,7 @@
         <tbody>
             <?php
             include 'conexion.php';
-            $query="SELECT * FROM empleados";
+            $query="SELECT  nombre, direccion, telefono, correo, usuario, contrasena FROM empleados";
             $ejecutar=$conexion->query($query);
             while($result=$ejecutar->fetch_array()){
                 echo "<tr>  
@@ -23,8 +23,7 @@
                 <td>".$result['correo']."</td>
                 <td>".$result['usuario']."</td>
                 <td>".$result['contrasena']."</td>
-                <td><a href='#' onclick='actualizarEmpleado(".$result['Id_empleado'].")'>Editar</a></td>
-                <td><a href='#' onclick='eliminarEmpleado(".$result['Id_empleado'].")'>Eliminar</a></td>
+                <td><a href='#' onclick='eliminarEmpleado (".$result['Id_empleado'].");'>Eliminar</a></td>
                 </tr>";
             }
             ?>

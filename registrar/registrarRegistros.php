@@ -15,12 +15,18 @@ $horaIngreso = date("H:i:s");
 $stmt = $conexion->prepare("INSERT INTO registro (id_vehiculo, id_cajon,fechaIngreso, horaIngreso, id_empleado, id_tarifa) VALUES (?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssssss", $id_vehiculo, $id_cajon, $fechaIngreso, $horaIngreso, $id_empleado, $id_tarifa);
 
-$result = $stmt->execute();
+//$result = $stmt->execute();
 
-if ($result) {
-    echo "success";
+if ($datos =mysqli_query($conexion, $sql)) {
+   $query="UPDATE cajones SET estatus='1' WHERE Id_cajon='".$idcajon."'";
+   if($datos2=mysqli_query($conexion, $sql)){
+    echo "Registro exitoso";
+   }
 } else {
     echo "error";
+}
+else{
+    echo "No se guardo correctamente"
 }
 
 $stmt->close();

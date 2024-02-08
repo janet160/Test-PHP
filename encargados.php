@@ -69,3 +69,14 @@ include 'conexion.php'
     include './consultarEncargados.php'
     ?>
 </div>
+
+
+
+
+
+
+
+
+
+
+

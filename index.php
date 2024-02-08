@@ -18,18 +18,20 @@
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
                                     <div class="text-center">
-                                        <img src="./imagenes/img.png" style="width: 185px;" alt="logo">
+                                        <img src="./imagenes/logo_trial.png" style="width: 185px;" alt="logo">
                                         <h4 class="mt-1 mb-5 pb-1">Bienvenido al sistema</h4>
                                     </div>
                                     <form action="login.php" method="post">
                                         <p>Ingresa los datos de tu cuenta</p>
                                         <div class="form-outline mb-4">
+                                        <label class="form-label">Usuario</label>
                                             <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario o correo"/>
-                                            <label class="form-label">Usuario</label>
+                                            
                                         </div>
                                         <div class="form-outline mb-4">
+                                        <label class="form-label">Contraseña</label>
                                             <input type="password" id="contrasena" name="contrasena" class="form-control"/>
-                                            <label class="form-label">Contraseña</label>
+                                            
                                         </div>
                                         <div class="text-center pt-1 mb-5 pb-1">
                                             <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" value="Entrar">Ingresar</button>

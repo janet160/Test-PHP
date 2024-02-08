@@ -21,17 +21,17 @@
             $ejecutar=$conexion->query($query);
             while($result=$ejecutar->fetch_array()){
                 echo "<tr>  
-                <td>".$result['id_registro']."</td>
-                <td>".$result['id_vehiculo']."</td>
-                <td>".$result['id_cajon']."</td>
+                <td>".$result['Id_registro']."</td>
+                <td>".$result['Id_vehiculo']."</td>
+                <td>".$result['Id_cajon']."</td>
                 <td>".$result['fechaIngreso']."</td>
                 <td>".$result['horaIngreso']."</td>
-                <td>".$result['fechaSalidad']."</td>
+                <td>".$result['fechaSalida']."</td>
                 <td>".$result['horaSalida']."</td>
-                <td>".$result['id_empleado']."</td>
-                <td>".$result['id_tarifa']."</td>
-                <td><a href='#' onclick='actualizarRegistro(".$result['id_registro'].")'>Actualizar</a></td>
-                <td><a href='#' onclick='eliminarRegistro(".$result['id_registro'].")'>Eliminar</a></td>
+                <td>".$result['Id_empleado']."</td>
+                <td>".$result['Id_tarifa']."</td>
+                <td><a href='#' onclick='actualizarRegistro(".$result['Id_registro'].")'>Actualizar</a></td>
+                <td><a href='#' onclick='eliminarRegistro(".$result['Id_registro'].")'>Eliminar</a></td>
                 </tr>";
             }
             ?>

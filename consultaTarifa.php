@@ -3,20 +3,19 @@
         <thead class="table-dark">
             <th scope="col">Tarifa</th>
             <th scope="col">Monto</th>
-            <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
+            <th scope="col">Editar</th>
         </thead>
         <tbody>
             <?php
-    include 'conexion.php';
-            $query="SELECT * FROM tarifa";
+            include 'conexion.php';
+            $query="SELECT tarifa, monto FROM tarifa";
             $ejecutar=$conexion->query($query);
             while($result=$ejecutar->fetch_array()){
                 echo "<tr>  
                 <td>".$result['tarifa']."</td>
                 <td>".$result['monto']."</td>
-                <td><a href='#' onclick='actualizarTarifa(".$result['Id_tarifa'].")'>Editar</a></td>
-                <td><a href='#' onclick='eliminarTarifa(".$result['Id_tarifa'].")'>Eliminar</a></td>
+                <td><a href='#' onclick='eliminarTarifa(".$result['Id_tarifa'].");'>Eliminar</a></td>
                 </tr>";
             }
             ?>

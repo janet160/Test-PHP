@@ -31,7 +31,7 @@ if (!isset($_SESSION['loggedin'])) {
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
       <div class="container-fluid">
-        <img src="./imagenes/img.png" style="width:2em" alt="">
+        <img src="./imagenes/logo_trial.png"  style="width:2em" alt="">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@ if (!isset($_SESSION['loggedin'])) {
             <li class="nav-item">
 
               <a class="nav-link active" onclick="loadDiv('#contenido','inicio.php');" aria-current="page"
-                href="#">inicio</a>
+                href="#">Inicio</a>
             </li>
             <li class="nav-item">
               <span class="nav-link">|</span>
@@ -61,20 +61,18 @@ if (!isset($_SESSION['loggedin'])) {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" onclick="loadDiv('#contenido','tarifas.php');">Tarifas</a>
+              <li class="nav-item">
+            <a class="nav-link" href="#" onclick="loadDiv('#contenido','encargados.php');">Encargados</a>
             </li>
             <li class="nav-item">
-              <span class="nav-link">|</span>
+            <a class="nav-link" href="#" onclick="loadDiv('#contenido','reportes.php');">Reportes</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Otros
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#" onclick="loadDiv('#contenido','encargados.php');">encargados</a></li>
-                <li><a class="dropdown-item" href="#" onclick="loadDiv('#contenido','reportes.php');">Reportes</a></li>
-                <li><a class="dropdown-item" href="#" onclick="closeSession ();">Salir</a></li>
-
+            <li class="nav-item">
+            <a class="nav-link" href="#" onclick="loadDiv('#contenido','servos.php');">Servomotor</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" href="logout.php" onclick="salir()" onclick="cancelarOperacion() "class="">Salir</a>
+            </li>
               </ul>
             </li>
           </ul>
@@ -87,9 +85,7 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="b-4">
         <div class="card">
             <div class="card-body text-center" >
-              <p>Bienvenido <b><?php echo $idUsuario ?></b> </p>
-
-      <p>Hola tonoto</p>
+              <p>Bienvenido <b><?php echo $nombre ?></b> </p>
 
         </div>
     </div>

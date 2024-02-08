@@ -34,8 +34,7 @@
                         </div>
                         <div class="col-lg-4">
                             <label for="puertas" class="form-label">Puertas:</label>
-                            <input type="number" id="puertas" min="0" name="puertas" class="form-control"
-                                placeholder="Correo electronico" />
+                            <input type="number" id="puertas" min="0" name="puertas" class="form-control" />
                         </div>
                         <div class="col-lg-4">
                             <label for="tipo" class="form-label">Tipo:</label>

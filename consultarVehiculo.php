@@ -22,9 +22,9 @@
                 <td style='background-color:".$result['color']."'></td>
                 <td>".$result['puertas']."</td>
                 <td>".$result['tipo']."</td>
-                <td>".$result['id_cliente']."</td>
-                <td><a href='#' onclick='actualizarVehiculo(".$result['id_vehiculo'].")'>Editar</a></td>
-                <td><a href='#' onclick='eliminarVehiculo(".$result['id_vehiculo'].")'>Eliminar</a></td>
+                <td>".$result['Id_cliente']."</td>
+                <td><a href='#' onclick='actualizarVehiculo(".$result['Id_vehiculo'].")'>Editar</a></td>
+                <td><a href='#' onclick='eliminarVehiculo(".$result['Id_vehiculo'].")'>Eliminar</a></td>
                 </tr>";
             }
             ?>
